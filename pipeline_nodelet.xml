@@ -1,0 +1,5 @@
+<library path="lib/libmy_nodes">
+	<class type="pipeline_nodelet::Level1" base_class_type="nodelet::Nodelet" name="pipeline_nodelet/Level1">
+		<description>THis is the 1st level node in a pipeline.</description>
+	</class>
+</library>
