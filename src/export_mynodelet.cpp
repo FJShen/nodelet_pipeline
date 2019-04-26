@@ -3,3 +3,4 @@
 #include <pipeline_nodelet/my_nodes.h>
 
 PLUGINLIB_EXPORT_CLASS(pipeline_nodelet::Level1, nodelet::Nodelet);
+PLUGINLIB_EXPORT_CLASS(pipeline_nodelet::Level2, nodelet::Nodelet);

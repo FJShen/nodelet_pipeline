@@ -1,7 +1,15 @@
 <launch>
-	<node pkg="nodelet" type="nodelet" name="standalone_nodelet" args="manager" />
+	<node pkg="nodelet" type="nodelet" name="standalone_nodelet" args="manager" output="screen" />
 	
 	<node pkg="nodelet" type="nodelet" name="nodelet_l1"
 			args="load pipeline_nodelet/Level1 standalone_nodelet">
+			<remap from="nodelet_l1/pipe_l1_output" to="pipe_l1_output" />
 	</node>
+	
+	<node pkg="nodelet" type="nodelet" name="nodelet_l2"
+			args="load pipeline_nodelet/Level2 standalone_nodelet">
+			<remap from="nodelet_l2/pipe_l1_output" to="pipe_l1_output" />
+			<remap from="nodelet_l2/pipe_l2_output" to="pipe_l2_output" />
+	</node>
+	
 </launch>
